@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ProducoesArtisticas" Class="ProducoesArtisticasDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=THIAGO;Initial Catalog=ProducoesArtisticas;Integrated Security=True" SettingsObjectName="NetCoders.LINQtoSQL.Intro.Properties.Settings" SettingsPropertyName="ProducoesArtisticasConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tbAtores" Member="tbAtores">
+    <Type Name="tbAtores">
+      <Column Name="AtorID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FilmeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Nome" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
+      <Association Name="tbFilme_tbAtores" Member="tbFilmes" ThisKey="FilmeID" OtherKey="FilmeID" Type="tbFilmes" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbFilmes" Member="tbFilmes">
+    <Type Name="tbFilmes">
+      <Column Name="FilmeID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nome" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Ano" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Preço" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="Genero" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Association Name="tbFilme_tbAtores" Member="tbAtores" ThisKey="FilmeID" OtherKey="FilmeID" Type="tbAtores" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="ProducoesArtisticas">
+  <DataContextMoniker Name="/ProducoesArtisticasDataContext" />
+  <nestedChildShapes>
+    <classShape Id="3e9f89ef-7457-4ac4-89fc-9a1171d995e2" absoluteBounds="4.25, 1, 2, 1.3862939453125">
+      <DataClassMoniker Name="/ProducoesArtisticasDataContext/tbAtores" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e246726a-84bb-4134-8832-c7e59c2ea049" absoluteBounds="4.265, 1.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="06059344-dd87-4326-b18d-b326643b6b7c" absoluteBounds="1.125, 1, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/ProducoesArtisticasDataContext/tbFilmes" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f6ae4d0c-4f67-4044-96c3-2a122201653a" absoluteBounds="1.1400000000000001, 1.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.125 : 1.69314697265625); (4.25 : 1.69314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/ProducoesArtisticasDataContext/tbFilmes/tbFilme_tbAtores" />
+      <nodes>
+        <classShapeMoniker Id="06059344-dd87-4326-b18d-b326643b6b7c" />
+        <classShapeMoniker Id="3e9f89ef-7457-4ac4-89fc-9a1171d995e2" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
